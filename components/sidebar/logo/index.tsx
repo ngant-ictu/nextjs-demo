@@ -21,4 +21,7 @@ const Logo:React.FC<IEmployee> = () => {
 
 export default Logo;
 
-const Branding = styled.div``
+const Branding = styled.div`  
+  display: block;
+  width: 100%:
+`

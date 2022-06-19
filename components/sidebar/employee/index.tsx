@@ -19,6 +19,15 @@ const ListEmployee:React.FC<IEmployee> = () => {
 
 export default ListEmployee;
 
-const List = styled.ul``
+const List = styled.ul`
+display: block; 
+width: 100%;      
+text-align: center;
+list-style: none;   
+padding: 0;                   
+`
 
-const Item = styled.li``
+const Item = styled.li`
+  color: ${({theme}) => theme.colors.primaryText};
+  cursor: pointer;
+`

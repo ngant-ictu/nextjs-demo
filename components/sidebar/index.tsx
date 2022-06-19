@@ -22,5 +22,7 @@ const Sidebar = styled.div`
   top: 0;
   bottom: 0;
   min-width: 300px;
-  
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 `
