@@ -4,17 +4,17 @@ import { IEmployee } from "../../../model/interface";
 
 //data
 import data from "../../../data/EmployeeData.json";
-import { useListEmployeeState } from "../../ListEmployeeState";
+import { useListEmployee } from "../../ListEmployeeState";
 
 const ListEmployee = () => {
-  const { state, setState } = useListEmployeeState();
+  const { state, ListEmployeeDispatcher } = useListEmployee();
 
   return (
     <List>
-      {state?.employees?.map((item, index) => (
+      {state?.employees?.map((item: any, index: any) => (
         <Item
           onClick={() => {
-            setState({ selectedEmployeeIndex: index });
+            ListEmployeeDispatcher.setState({ selectedEmployeeIndex: index });
           }}
           key={index}
         >
@@ -32,4 +32,9 @@ const List = styled.ul`
   list-style: none;
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+`;
