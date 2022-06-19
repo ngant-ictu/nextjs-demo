@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import styled from 'styled-components';
 import Image from 'next/image'
-import { useListEmployeeState } from "../../components/ListEmployeeState";
+import { useListEmployee } from "../../components/ListEmployeeState";
 
 
 const EmployeeDetail:React.FC = () => {
-  const {state, setState} = useListEmployeeState();
+  const {state, ListEmployeeDispatcher} = useListEmployee();
   const selectedEmployee = state.employees[state.selectedEmployeeIndex];
 
   return (
