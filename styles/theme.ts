@@ -13,10 +13,11 @@ const theme = {
   },
   colors: {
 		primary: '#2194b4',
-		secondary: '#2194b4',
+		secondary: '#222222',
     primaryText: '#2194b4',
-    secondaryText: '#2194b4',
+    secondaryText: '#222222',
     white: '#FFFFFF',
+    gray: '#373737',
 	},
   breakPoints: {
     mobile: '767px',

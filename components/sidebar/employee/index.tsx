@@ -32,4 +32,9 @@ const List = styled.ul`
   list-style: none;
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+  color: ${({theme}) => theme.colors.primary};
+  font-size: 30px;
+  padding: 10px 0;
+  cursor: pointer;
+`;

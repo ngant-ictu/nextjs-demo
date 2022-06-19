@@ -50,4 +50,6 @@ const MainContent = styled.div`
 
 const Main = styled.div`
   padding-left: 500px;
+  min-height: calc(100vh - 200px);
+  background: ${({theme}) => theme.colors.secondary}
 `;
