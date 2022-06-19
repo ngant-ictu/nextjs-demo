@@ -1,9 +1,127 @@
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-BlackItalic.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Bold.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Black.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Light.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Medium.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-BoldItalic.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-MediumItalic.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-LightItalic.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Italic.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Regular.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-Thin.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/roboto/Roboto-ThinItalic.woff2') format('woff2'),
+      url('/assets/fonts/roboto/Roboto-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color:#043551;
+  /*scroll-behavior: smooth;*/
+}
+
+body.lock-scroll {
+  overflow: hidden;
 }
 
 a {
@@ -11,6 +129,66 @@ a {
   text-decoration: none;
 }
 
-* {
+p, h1, h2, h3, h4 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.pt-25 {
+  font-size: 25px;
+  line-height: 35px;
+}
+.font-bold {
+  font-weight: 700 !important;
+}
+
+.max-w-a {
+  max-width: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .hide-under-desktop {
+    display: none !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+
+  * {
+    cursor: none !important;
+  }
 }
