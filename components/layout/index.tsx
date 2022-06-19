@@ -1,17 +1,20 @@
 import Head from "next/head";
+import { ReactNode } from "react";
 import styled from "styled-components";
-import theme from '../../styles/theme';
+import theme from "../../styles/theme";
 import HeroBanner from "../HeroBanner";
+import { useListEmployeeState } from "../ListEmployeeState";
 import SideLeft from "../sidebar";
 
-
 interface Props {
-  children?: JSX.IntrinsicAttributes;
+  children?: ReactNode;
 }
 
+const Layout = ({ children }: Props) => {
+  const {state, setState} = useListEmployeeState();
 
-const Layout = ({ children}: Props) => {
- 
+  const selectedEmployee = state.employees[state.selectedEmployeeIndex];
+
   return (
     <div>
       <Head>
@@ -27,11 +30,12 @@ const Layout = ({ children}: Props) => {
         <MainContent>
           <HeroBanner />
           <Main>
-            {children}
+            {selectedEmployee.name}<br />
+            {selectedEmployee.popularity}<br />
+            {selectedEmployee.biography}<br />
           </Main>
         </MainContent>
       </WrapperContainer>
-      
     </div>
   );
 };
@@ -40,10 +44,10 @@ export default Layout;
 
 const WrapperContainer = styled.div`
   position: relative;
-`
+`;
 
 const MainContent = styled.div`
   min-height: 100vh;
-`
+`;
 
-const Main = styled.div``
+const Main = styled.div``;

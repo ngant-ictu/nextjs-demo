@@ -1,33 +1,32 @@
-import React from 'react';
-import styled from 'styled-components';
-import { IEmployee } from '../../../model/interface';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { IEmployee } from "../../../model/interface";
 
 //data
-import dataEmployee from '../../../data/EmployeeData.json'
+import data from "../../../data/EmployeeData.json";
+import { useListEmployeeState } from "../../ListEmployeeState";
 
-const ListEmployee:React.FC<IEmployee> = () => {
+const ListEmployee = () => {
+  const { state, setState } = useListEmployeeState();
+
   return (
     <List>
-      {dataEmployee && dataEmployee["employees"].map((item, key) => 
-        <Item key={key}>
+      {state?.employees?.map((item, index) => (
+        <Item
+          onClick={() => {
+            setState({ selectedEmployeeIndex: index });
+          }}
+          key={index}
+        >
           {item.name}
         </Item>
-      )}
+      ))}
     </List>
-  )
-}
+  );
+};
 
 export default ListEmployee;
 
-const List = styled.ul`
-display: block; 
-width: 100%;      
-text-align: center;
-list-style: none;   
-padding: 0;                   
-`
+const List = styled.ul``;
 
-const Item = styled.li`
-  color: ${({theme}) => theme.colors.primaryText};
-  cursor: pointer;
-`
+const Item = styled.li``;
