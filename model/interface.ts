@@ -4,5 +4,4 @@ export interface IEmployee {
   biography?: string;
   image?: string,
   colleagues?: []
-
 }
