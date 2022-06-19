@@ -13,7 +13,9 @@ const theme = {
   },
   colors: {
 		primary: '#2194b4',
+		secondary: '#2194b4',
     primaryText: '#2194b4',
+    secondaryText: '#2194b4',
     white: '#FFFFFF',
 	},
   breakPoints: {
