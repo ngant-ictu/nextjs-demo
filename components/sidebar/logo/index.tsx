@@ -23,5 +23,6 @@ export default Logo;
 
 const Branding = styled.div`  
   display: block;
-  width: 100%:
+  width: 100%;
+  text-align: center;
 `
