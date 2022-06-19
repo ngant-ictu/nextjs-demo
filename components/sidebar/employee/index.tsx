@@ -27,6 +27,9 @@ const ListEmployee = () => {
 
 export default ListEmployee;
 
-const List = styled.ul``;
+const List = styled.ul`
+  padding: 0;
+  list-style: none;
+`;
 
 const Item = styled.li``;

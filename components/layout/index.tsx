@@ -30,9 +30,7 @@ const Layout = ({ children }: Props) => {
         <MainContent>
           <HeroBanner />
           <Main>
-            {selectedEmployee.name}<br />
-            {selectedEmployee.popularity}<br />
-            {selectedEmployee.biography}<br />
+           {children}
           </Main>
         </MainContent>
       </WrapperContainer>
@@ -50,4 +48,6 @@ const MainContent = styled.div`
   min-height: 100vh;
 `;
 
-const Main = styled.div``;
+const Main = styled.div`
+  padding-left: 500px;
+`;
