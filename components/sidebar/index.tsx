@@ -25,4 +25,5 @@ const Sidebar = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  padding: 60px 0;
 `

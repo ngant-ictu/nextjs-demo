@@ -18,4 +18,7 @@ const HeroBanner = () => {
 
 export default HeroBanner;
 
-const Banner = styled.div``
+const Banner = styled.div`
+  height: 200px;
+  position: relative;
+`
